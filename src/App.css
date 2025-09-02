@@ -21,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f0ede1;
+  position: relative;
 }
 
 html {
@@ -88,6 +89,7 @@ html {
   font-size: 3.6rem;
   color: #083b7b;
   text-align: center;
+  line-height: 6rem;
 }
 
 .game-over-msg button {
@@ -106,4 +108,12 @@ html {
 
 .game-over-msg button:hover {
   background-color: #f5b598;
+}
+
+.scores {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #083b7b;
 }

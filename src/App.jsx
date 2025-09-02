@@ -3,6 +3,8 @@ import "./App.css";
 import { useState } from "react";
 export default function App() {
   const [characterList, setCharacterList] = useState(characters);
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   const gameOver =
     characterList.some((char) => Object.hasOwn(char, `isClicked`)) &&
@@ -19,6 +21,8 @@ export default function App() {
         char.id === id ? { ...char, isClicked: !char.isClicked } : char
       )
     );
+
+    if (!gameOver) setScore((s) => s + 1);
   };
 
   const characterEl = characterList.map((char) => (
@@ -41,10 +45,16 @@ export default function App() {
       {gameOver ? (
         <div className="game-over-msg">
           <p>
-            You clicked a character twice. <br></br> Try again!
+            You clicked a character twice.
+            <br></br>
+            Your score was {score}.<br></br> Try again!
           </p>
           <button
-            onClick={() => setCharacterList(characters)}
+            onClick={() => {
+              setCharacterList(characters);
+              setScore(0);
+              if (gameOver && score > bestScore) setBestScore(score);
+            }}
             className="retry-btn"
           >
             Let's Go!
@@ -52,6 +62,10 @@ export default function App() {
         </div>
       ) : (
         <>
+          <div className="scores">
+            <p>Current Score: {score}</p>
+            <p>Best Score: {bestScore}</p>
+          </div>
           <h1 className="primary-heading">Naruto Memo</h1>
           <p className="introductory-text">
             Welcome!
