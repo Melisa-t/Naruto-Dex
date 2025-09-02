@@ -58,6 +58,10 @@ html {
 
 #root {
   min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-container {
@@ -123,7 +127,7 @@ html {
   top: 1rem;
   right: 2rem;
   font-size: 3rem;
-  color: #083b7b;
+  color: #ff7b36;
 }
 
 .win-msg {
@@ -138,4 +142,28 @@ html {
   color: #083b7b;
   line-height: 11rem;
   gap: 5rem;
+}
+
+footer {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+  color: #ff7b36;
+  text-decoration: none;
+}
+
+footer img {
+  width: auto;
+  height: 24px;
 }

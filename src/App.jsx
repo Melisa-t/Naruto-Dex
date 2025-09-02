@@ -92,6 +92,17 @@ export default function App() {
             Choose each character only once. Let's see your memory game!
           </p>
           <div className="game-container">{characterEl}</div>
+          <footer>
+            <img
+              src="https://img.icons8.com/?size=100&id=106562&format=png&color=000000"
+              alt="Icon for GitHub"
+            />
+            <p>
+              <a href="https://github.com/melisa-t/" target="_blank">
+                Melisa L.
+              </a>
+            </p>
+          </footer>
         </>
       )}
     </>
