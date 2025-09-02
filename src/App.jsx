@@ -1,6 +1,7 @@
 import { characters } from "./characters.js";
 import "./App.css";
 import { useState } from "react";
+
 export default function App() {
   const [characterList, setCharacterList] = useState(characters);
   const [score, setScore] = useState(0);
@@ -42,12 +43,12 @@ export default function App() {
 
   return (
     <>
-      {bestScore >= 12 ? (
+      {score >= 12 ? (
         <div className="win-msg">
           <p>
-            Congratulations!
+            Whoa, congratulations!
             <br></br>
-            Whoa, you got some memory.
+            You got some memory.
           </p>
           <button
             onClick={() => {

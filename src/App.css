@@ -21,6 +21,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f0ede1;
+  background-image: url(./assets/img/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -29,22 +33,26 @@ html {
 }
 
 .container h3 {
-  margin-top: 1rem;
   font-size: 1.6rem;
   justify-self: center;
   color: #083b7b;
 }
 
+.container {
+  background-color: rgba(255, 255, 255, 0.824);
+  padding: 1rem 0.5rem;
+}
+
 .card-img {
   width: 250px;
-  height: 190px;
+  height: 170px;
   transition: all 0.2s;
   border-radius: 2px;
   box-shadow: 2px 3px 10px 1px #00000012;
 }
 
 .card-img:hover {
-  transform: translateY(-2%);
+  transform: translateY(2%);
   cursor: pointer;
 }
 
@@ -128,6 +136,6 @@ html {
   font-size: 6rem;
   text-align: center;
   color: #083b7b;
-  line-height: 8rem;
+  line-height: 11rem;
   gap: 5rem;
 }
