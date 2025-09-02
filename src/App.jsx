@@ -42,7 +42,25 @@ export default function App() {
 
   return (
     <>
-      {gameOver ? (
+      {bestScore >= 12 ? (
+        <div className="win-msg">
+          <p>
+            Congratulations!
+            <br></br>
+            Whoa, you got some memory.
+          </p>
+          <button
+            onClick={() => {
+              setCharacterList(characters);
+              setScore(0);
+              if (gameOver && score > bestScore) setBestScore(score);
+            }}
+            className="retry-btn"
+          >
+            Play Again?
+          </button>
+        </div>
+      ) : gameOver ? (
         <div className="game-over-msg">
           <p>
             You clicked a character twice.

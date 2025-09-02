@@ -92,7 +92,7 @@ html {
   line-height: 6rem;
 }
 
-.game-over-msg button {
+.retry-btn {
   background-color: #ff7b36;
   width: 20rem;
   height: 6rem;
@@ -116,4 +116,18 @@ html {
   right: 2rem;
   font-size: 3rem;
   color: #083b7b;
+}
+
+.win-msg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  text-align: center;
+  color: #083b7b;
+  line-height: 8rem;
+  gap: 5rem;
 }
