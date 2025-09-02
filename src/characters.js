@@ -1,16 +1,16 @@
 import { nanoid } from "nanoid";
-import naruto from "./img/naruto.png";
-import sasuke from "./img/sasuke.png";
-import kakashi from "./img/kakashi.png";
-import gaara from "./img/gaara.png";
-import jiraiya from "./img/jiraiya.png";
-import mightyguy from "./img/mightyguy.png";
-import itachi from "./img/itachi.png";
-import tsunade from "./img/tsunade.png";
-import rocklee from "./img/rocklee.png";
-import sakura from "./img/sakura.png";
-import shikamaru from "./img/shikamaru.png";
-import hinata from "./img/hinata.png";
+import naruto from "./assets/img/naruto.png";
+import sasuke from "./assets/img/sasuke.png";
+import kakashi from "./assets/img/kakashi.png";
+import gaara from "./assets/img/gaara.png";
+import jiraiya from "./assets/img/jiraiya.png";
+import mightyguy from "./assets/img/mightyguy.png";
+import itachi from "./assets/img/itachi.png";
+import tsunade from "./assets/img/tsunade.png";
+import rocklee from "./assets/img/rocklee.png";
+import sakura from "./assets/img/sakura.png";
+import shikamaru from "./assets/img/shikamaru.png";
+import hinata from "./assets/img/hinata.png";
 
 export const characters = [
   { name: "Naruto", src: naruto, id: nanoid() },
