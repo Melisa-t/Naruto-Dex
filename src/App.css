@@ -148,10 +148,7 @@ footer {
   position: absolute;
   top: 1rem;
   left: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+
   font-size: 1.2rem;
 }
 
@@ -166,4 +163,11 @@ footer a:active {
 footer img {
   width: auto;
   height: 24px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
