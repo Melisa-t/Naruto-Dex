@@ -118,7 +118,7 @@ html {
   outline: 0.6rem solid #f5b598;
 }
 
-.game-over-msg button:hover {
+.retry-btn:hover {
   background-color: #f5b598;
 }
 
