@@ -85,11 +85,11 @@ export default function App() {
             <p>Current Score: {score}</p>
             <p>Best Score: {bestScore}</p>
           </div>
-          <h1 className="primary-heading">Naruto Memo</h1>
+          <h1 className="primary-heading">Naruto Dex</h1>
           <p className="introductory-text">
-            Welcome!
+            Choose each character only once.
             <br></br>
-            Choose each character only once. Let's see your memory game!
+            Let's see your memory game!
           </p>
           <div className="game-container">{characterEl}</div>
           <footer>
