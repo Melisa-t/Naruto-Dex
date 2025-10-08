@@ -100,6 +100,12 @@ export default function App() {
                 alt="Icon for GitHub"
               />
               <p>Melisa L.</p>
+              <audio controls loop autoplay>
+                <source
+                  src="../assets/music/Naruto - The Raising Fighting Spirit.mp3"
+                  type="audio/mp3"
+                />
+              </audio>
             </a>
           </footer>
         </>
