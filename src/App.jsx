@@ -1,6 +1,9 @@
 import { characters } from "./characters.js";
 import "./App.css";
 import { useState } from "react";
+import Footer from "./Footer.jsx";
+import Card from "./Card.jsx";
+import Game from "./Game.jsx";
 import Player from "./Player.jsx";
 
 export default function App() {
@@ -28,84 +31,23 @@ export default function App() {
   };
 
   const characterEl = characterList.map((char) => (
-    <div className="card-container">
-      <img
-        onClick={() => shuffle(characterList, char.id)}
-        key={char.id}
-        className="card-img"
-        src={char.src}
-        alt={"A picture of " + char.name}
-      ></img>
-      <div className="container">
-        <h3>{char.name}</h3>
-      </div>
-    </div>
+    <Card char={char} characterList={characterList} shuffle={shuffle}></Card>
   ));
 
   return (
     <>
-      {score >= 12 ? (
-        <div className="win-msg">
-          <p>
-            Whoa, congratulations!
-            <br></br>
-            You got some memory.
-          </p>
-          <button
-            onClick={() => {
-              setCharacterList(characters);
-              setScore(0);
-              if (gameOver && score > bestScore) setBestScore(score);
-            }}
-            className="retry-btn"
-          >
-            Play Again?
-          </button>
-        </div>
-      ) : gameOver ? (
-        <div className="game-over-msg">
-          <p>
-            You clicked a character twice.
-            <br></br>
-            Your score was {score}.<br></br> Try again!
-          </p>
-          <button
-            onClick={() => {
-              setCharacterList(characters);
-              setScore(0);
-              if (gameOver && score > bestScore) setBestScore(score);
-            }}
-            className="retry-btn"
-          >
-            Let's Go!
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className="scores">
-            <p>Current Score: {score}</p>
-            <p>Best Score: {bestScore}</p>
-          </div>
-          <h1 className="primary-heading">Naruto Dex</h1>
-          <p className="introductory-text">
-            Choose each character only once.
-            <br></br>
-            Let's see your memory game!
-          </p>
-          <div className="game-container">{characterEl}</div>
-          <footer>
-            <a href="https://github.com/melisa-t/" target="_blank">
-              {" "}
-              <img
-                src="https://img.icons8.com/?size=100&id=106562&format=png&color=000000"
-                alt="Icon for GitHub"
-              />
-              <p>Melisa L.</p>
-            </a>
-            {!gameOver && <Player></Player>}
-          </footer>
-        </>
-      )}
+      <Game
+        characterEl={characterEl}
+        characters={characters}
+        score={score}
+        gameOver={gameOver}
+        bestScore={bestScore}
+        setBestScore={setBestScore}
+        setScore={setScore}
+        setCharacterList={setCharacterList}
+      ></Game>
+      <Footer></Footer>
+      <Player gameOver={gameOver}></Player>
     </>
   );
 }

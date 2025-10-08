@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export default function Player() {
+export default function Player({ gameOver }) {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const audioEl = useRef(null);
   return (
@@ -14,7 +14,7 @@ export default function Player() {
         }
         alt="play"
         onClick={() => {
-          if (!isAudioPlaying) {
+          if (!isAudioPlaying && !gameOver) {
             audioEl.current.play();
             audioEl.current.volume = 0.2;
           }
