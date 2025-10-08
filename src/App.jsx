@@ -1,6 +1,7 @@
 import { characters } from "./characters.js";
 import "./App.css";
 import { useState } from "react";
+import Player from "./Player.jsx";
 
 export default function App() {
   const [characterList, setCharacterList] = useState(characters);
@@ -100,13 +101,8 @@ export default function App() {
                 alt="Icon for GitHub"
               />
               <p>Melisa L.</p>
-              <audio controls loop autoplay>
-                <source
-                  src="../assets/music/Naruto - The Raising Fighting Spirit.mp3"
-                  type="audio/mp3"
-                />
-              </audio>
             </a>
+            {!gameOver && <Player></Player>}
           </footer>
         </>
       )}

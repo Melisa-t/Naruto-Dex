@@ -149,8 +149,11 @@ footer {
   position: absolute;
   top: 1rem;
   left: 2rem;
-
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer a:link,
@@ -171,4 +174,14 @@ a {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+.speaker:hover {
+  cursor: pointer;
+}
+
+.speaker {
+  margin-top: 1rem;
+  width: 4.8rem;
+  height: 4.8rem;
 }
